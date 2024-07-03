@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>day01-simple-todo-list</title>
+    <script src="tailwind.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        first: '#898AA6',
+                        second: '#C9BBCF',
+                        third: '#B7D3DF',
+                        fourth: '#D6EFED',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-    <h1>day01-simple-todo-list</h1>
+    <header class="text-center bg-first text-white py-6">
+        <h1 class="text-2xl font-bold">day01-simple-todo-list</h1>
+        <p class="px-2">Add, delete, and mark tasks as completed.</p>
+    </header>
+    <section class="p-2">
+        <div>
+            <input type="text" name="task" class="px-3 py-1 rounded font-semibold border-b-2 w-[90%] border-gray-300" id="task" />
+            <button class="float-right border px-3 py-1 rounded font-semibold border-1" type="button" id="addButton" onclick="addTask()">
+                Add
+            </button>
+        </div>
+        <div class="font-semibold pt-4 text-2xl mb-2">TASK</div>
+        <div>
+            <ol class="list-decimal list-inside" id="taskList">
+                <li class="bg-[#efefef] p-[10px]">
+                    <input type="checkbox" class="mr-2" onclick="markCompleted(event)">
+                    <span>My Task</span>
+                    <button class="delete border border-1 border-[#e56161] px-1 rounded float-right text-[#e56161]" onclick="deleteRask(event)">Delete</button>
+                </li>
+            </ol>
+        </div>
+    </section>
+    <footer class="p-2">
+        <p class="text-center">Copyright &copy; 2024</p>
+    </footer>
 </body>
+
 </html>
