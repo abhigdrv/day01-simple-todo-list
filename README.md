@@ -1,5 +1,1 @@
-<!-- color pallet
-    #898AA6
-    #C9BBCF
-    #B7D3DF
-    #D6EFED -->
+# https://main--day01-simple-todo-list.netlify.app
